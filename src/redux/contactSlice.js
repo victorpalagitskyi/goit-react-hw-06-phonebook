@@ -9,11 +9,11 @@ export const contactSlice = createSlice({
         addContact: {
             reducer(state, { payload }) {
                 state.push(payload)
-            }
+            },
             prepare(name, number) {
                 return {
                     payload: {
-                        id: nanoid()
+                        id: nanoid(),
                         name,
                         number,
                     }
@@ -23,5 +23,7 @@ export const contactSlice = createSlice({
         delContact: (state, { payload }) => 
             state.filter(contact => contact.id !== payload)
         }
-    }
-})
+    })
+
+    export const { addContacts, delContact } = contactSlice.actions;
+    export const tasksReducer = contactSlice.reducer;
