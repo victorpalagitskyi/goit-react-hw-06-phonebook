@@ -1,10 +1,18 @@
-// export const App = () => {
+import ContactForm from "./ContactForm";
+import ContactList from "./ContactList";
+import Filter from "./Filter";
+
+const  App = () => {
  
- 
- 
-//     return (
-//         <>
-        
-//         </>
-//   )
-// };
+  return (
+    <>
+      <h1>Phonebook</h1>
+      <ContactForm></ContactForm>
+      <h2>Contacts</h2>
+      <Filter />
+      <ContactList />
+    </>
+  );
+}
+
+export default App
