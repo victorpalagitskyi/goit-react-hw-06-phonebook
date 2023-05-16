@@ -15,9 +15,9 @@ const ContactList = () => {
     dispatch(delContact(e.target.id));
     Notiflix.Notify.success(`Сontact deleted successfully`);
   };
-
+// const FilterdComments = () => comments.filter(({ content }) => content..includes(filter.toLowerCase()))
   const visibleContacts = filters
-    ? contacts.filter(contact => contact.name.includes(filters))
+    ? contacts.filter(contact => contact.name.toLowerCase().includes(filters.toLowerCase()))
     : contacts;
 
   return (

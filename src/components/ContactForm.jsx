@@ -15,7 +15,7 @@ const ContactForm = () => {
 
     const handleSubmit = ({ name, number }, action) => {
 
-    if (contacts.find(contact => contact.name === name) !== undefined) {
+    if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase()) !== undefined) {
       Notiflix.Notify.failure(`${name} already in your contact book`);
       return;
     }
