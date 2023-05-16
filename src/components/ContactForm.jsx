@@ -25,10 +25,6 @@ const ContactForm = () => {
     action.resetForm();
   };
 
-
-
-  
-
   return (
     <Formik
       initialValues={initialValues}
